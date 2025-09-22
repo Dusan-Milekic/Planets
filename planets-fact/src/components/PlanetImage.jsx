@@ -34,7 +34,7 @@ export default class PlanetImage extends React.Component {
       planetData[this.state.planet.toLowerCase()] || planetData.neptune;
 
     return (
-      <div className="planet-image flex justify-center py-16">
+      <div className="planet-image flex justify-center py-16 relative animate-fade-down">
         <img src={currentPlanet.src} alt={currentPlanet.alt} className="w-44" />
       </div>
     );

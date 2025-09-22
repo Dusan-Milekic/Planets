@@ -5,6 +5,7 @@ import PlanetLinks from "./components/PlanetLinks";
 import PlanetImage from "./components/PlanetImage";
 import PlanetInfo from "./components/PlanetInfo";
 import PlanetStructure from "./components/PlanetStructure";
+import PlanetSurface from "./components/PlanetSurface";
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 
 // Komponenta koja koristi useParams umesto useLocation
@@ -18,7 +19,20 @@ function PlanetPage() {
     </>
   );
 }
+function PlanetSurfacePage() {
+  const { planetName } = useParams();
 
+  return (
+    <>
+      <div className="surface">
+        <PlanetImage planet={planetName} />
+        <PlanetSurface planet={planetName} />
+      </div>
+
+      <PlanetInfo planet={planetName} />
+    </>
+  );
+}
 function PlanetStructurePage() {
   const { planetName } = useParams();
 
@@ -47,6 +61,7 @@ function App() {
             path="/:planetName/structure"
             element={<PlanetStructurePage />}
           />
+          <Route path="/:planetName/surface" element={<PlanetSurfacePage />} />
 
           <Route
             path="/"

@@ -16,34 +16,38 @@ export default class PlanetInfo extends React.Component {
 
   render() {
     return (
-      <div className="text px-8">
-        <h1 className="text-4xl mb-7">{this.state.planet.name}</h1>
-        <p>{this.state.planet.overview.content}</p>
+      <div className="text px-8 ">
+        <h1 className="text-4xl mb-7 animate-fade-left">
+          {this.state.planet.name}
+        </h1>
+        <p className="animate-fade-right">
+          {this.state.planet.overview.content}
+        </p>
         <div className="wikipedia py-8">
-          <p>
+          <p className="animate-fade">
             Source: <a href="#">Wikipedia</a>
           </p>
         </div>
-        <div className="info flex flex-col gap-3 pb-8">
-          <div className="item flex justify-between py-4 border border-gray-500 px-4">
+        <div className="info flex flex-col gap-3 pb-8 animate-fade-up ">
+          <div className="item flex justify-between py-4 border border-gray-500 px-4 hover:scale-95 hover:bg-black transition-colors">
             <p className="text-gray-500">ROTATION TIME</p>
             <p className="text-xl font-bold uppercase">
               {this.state.planet.rotation}
             </p>
           </div>
-          <div className="item flex justify-between py-4 border border-gray-500 px-4">
+          <div className="item flex justify-between py-4 border border-gray-500 px-4 hover:scale-95 hover:bg-black transition-colors">
             <p className="text-gray-500">REVOLUTION TIME</p>
             <p className="text-xl font-bold uppercase">
               {this.state.planet.revolution}
             </p>
           </div>
-          <div className="item flex justify-between py-4 border border-gray-500 px-4">
+          <div className="item flex justify-between py-4 border border-gray-500 px-4 hover:scale-95 hover:bg-black transition-colors">
             <p className="text-gray-500">RADIUS</p>
             <p className="text-xl font-bold uppercase">
               {this.state.planet.radius}
             </p>
           </div>
-          <div className="item flex justify-between py-4 border border-gray-500 px-4">
+          <div className="item flex justify-between py-4 border border-gray-500 px-4 hover:scale-95 hover:bg-black transition-colors">
             <p className="text-gray-500">AVERAGE TEMP.</p>
             <p className="text-xl font-bold uppercase">
               {this.state.planet.temperature}

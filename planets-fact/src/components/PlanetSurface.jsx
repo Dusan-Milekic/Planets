@@ -1,14 +1,14 @@
 import React from "react";
-import nepute from "../assets/planet-neptune-internal.svg";
-import uranus from "../assets/planet-uranus-internal.svg"; // Ispravljen naziv fajla
-import earth from "../assets/planet-earth-internal.svg";
-import jupiter from "../assets/planet-jupiter-internal.svg";
-import mars from "../assets/planet-mars-internal.svg";
-import mercury from "../assets/planet-mercury-internal.svg";
-import saturn from "../assets/planet-saturn-internal.svg";
-import venus from "../assets/planet-venus-internal.svg";
+import nepute from "../assets/geology-neptune.png";
+import uranus from "../assets/geology-uranus.png"; // Ispravljen naziv fajla
+import earth from "../assets/geology-earth.png";
+import jupiter from "../assets/geology-jupiter.png";
+import mars from "../assets/geology-mars.png";
+import mercury from "../assets/geology-mercury.png";
+import saturn from "../assets/geology-saturn.png";
+import venus from "../assets/geology-venus.png";
 
-export default class PlanetStructure extends React.Component {
+export default class PlanetSurface extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,9 +41,11 @@ export default class PlanetStructure extends React.Component {
       planetData[this.state.planet?.toLowerCase()] || planetData.neptune;
 
     return (
-      <div className="planet-image flex justify-center py-16 animate-fade">
-        <img src={currentPlanet.src} alt={currentPlanet.alt} className="w-44" />
-      </div>
+      <img
+        src={currentPlanet.src}
+        alt={currentPlanet.alt}
+        className="w-20 py-0 absolute  pb-29 left-2/4 -translate-1/2 animate-fade"
+      />
     );
   }
 }

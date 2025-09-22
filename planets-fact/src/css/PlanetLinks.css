@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+@layer components {
+  span {
+    @apply animate-fade;
+  }
+}
+.link:hover > span {
+  display: block;
+}
