@@ -3,8 +3,7 @@
 @import "tailwindcss";
 @import "tailwindcss-animated";
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  margin: 0 30px;
   padding: 0;
   text-align: center;
 }

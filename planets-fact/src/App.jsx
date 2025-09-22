@@ -14,8 +14,14 @@ function PlanetPage() {
 
   return (
     <>
-      <PlanetImage planet={planetName} />
-      <PlanetInfo planet={planetName} />
+      <div className="2xl:flex w-full 2xl:justify-center 2xl:items-center py-20">
+        <div className="2xl:w-2/4 scale-150">
+          <PlanetImage planet={planetName} />
+        </div>
+        <div className="2xl:w-2/4">
+          <PlanetInfo planet={planetName} />
+        </div>
+      </div>
     </>
   );
 }
@@ -24,12 +30,15 @@ function PlanetSurfacePage() {
 
   return (
     <>
-      <div className="surface">
-        <PlanetImage planet={planetName} />
-        <PlanetSurface planet={planetName} />
+      <div className="surface 2xl:flex w-full  2xl:justify-center 2xl:items-center py-20">
+        <div className="2xl:w-2/4 scale-150">
+          <PlanetImage planet={planetName} />
+          <PlanetSurface planet={planetName} />
+        </div>
+        <div className="2xl:w-2/4">
+          <PlanetInfo planet={planetName} />
+        </div>
       </div>
-
-      <PlanetInfo planet={planetName} />
     </>
   );
 }
@@ -38,8 +47,14 @@ function PlanetStructurePage() {
 
   return (
     <>
-      <PlanetStructure planet={planetName} />
-      <PlanetInfo planet={planetName} />
+      <div className="strcutre 2xl:flex w-full  2xl:justify-center 2xl:items-center py-20">
+        <div className="2xl:w-2/4 scale-150">
+          <PlanetStructure planet={planetName} />
+        </div>
+        <div className="2xl:w-2/4">
+          <PlanetInfo planet={planetName} />
+        </div>
+      </div>
     </>
   );
 }
@@ -73,6 +88,9 @@ function App() {
           />
         </Routes>
       </main>
+      <footer className="py-11 text-white opacity-50">
+        <p>&copy; Created by: Dusan Milekic</p>
+      </footer>
     </BrowserRouter>
   );
 }

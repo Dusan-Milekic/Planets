@@ -16,9 +16,9 @@ export default class PlanetInfo extends React.Component {
 
   render() {
     return (
-      <div className="text px-8 ">
-        <div className="holderinfo flex items-center gap-6">
-          <div className="left">
+      <div className="text px-8 2xl:w-full">
+        <div className="holderinfo flex items-center gap-6 2xl:flex-col 2xl:items-stretch 2xl:w-full">
+          <div className="left w-full 2xl:w-full md:flex-1">
             <h1 className="text-4xl mb-7 animate-fade-left md:text-left">
               {this.state.planet.name}
             </h1>
@@ -31,7 +31,7 @@ export default class PlanetInfo extends React.Component {
               </p>
             </div>
           </div>
-          <div className="right hidden md:block md:animate-fade-left">
+          <div className="right hidden md:block md:animate-fade-left 2xl:items-stretch 2xl:w-full">
             <PlanetLinks />
           </div>
         </div>

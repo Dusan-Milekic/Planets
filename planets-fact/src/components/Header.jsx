@@ -27,48 +27,48 @@ export default class Header extends React.Component {
   render() {
     return (
       <>
-        <div className="header flex justify-between items-center border-b px-8 py-5 md:flex-col">
+        <div className="header flex justify-between items-center border-b px-8 py-5 md:flex-col 2xl:flex-row ">
           <h1 className="text-3xl">THE PLANETS</h1>
 
-          <nav className="hidden md:block pt-5">
+          <nav className="hidden md:block pt-5 animate-fade">
             <ul className="flex gap-10">
               <li className="py-4 cursor-pointer">
-                <a href="/mercury" className="text-lg">
+                <a href="/mercury" className="text-lg hover:opacity-60">
                   MERCURY
                 </a>
               </li>
               <li className=" py-4 cursor-pointer">
-                <a href="/venus" className="text-lg">
+                <a href="/venus" className="text-lg hover:opacity-60">
                   VENUS
                 </a>
               </li>
               <li className=" py-4 cursor-pointer">
-                <a href="/earth" className="text-lg">
+                <a href="/earth" className="text-lg hover:opacity-60">
                   EARTH
                 </a>
               </li>
               <li className=" py-4 cursor-pointer">
-                <a href="/mars" className="text-lg">
+                <a href="/mars" className="text-lg hover:opacity-60">
                   MARS
                 </a>
               </li>
               <li className=" py-4 cursor-pointer">
-                <a href="/jupiter" className="text-lg">
+                <a href="/jupiter" className="text-lg hover:opacity-60">
                   JUPITER
                 </a>
               </li>
               <li className=" py-4 cursor-pointer">
-                <a href="/saturn" className="text-lg">
+                <a href="/saturn" className="text-lg hover:opacity-60">
                   SATURN
                 </a>
               </li>
               <li className="py-4 cursor-pointer">
-                <a href="/uranus" className="text-lg">
+                <a href="/uranus" className="text-lg hover:opacity-60">
                   URANUS
                 </a>
               </li>
               <li className=" py-4 cursor-pointer">
-                <a href="/neptune" className="text-lg">
+                <a href="/neptune" className="text-lg hover:opacity-60">
                   NEPTUNE
                 </a>
               </li>

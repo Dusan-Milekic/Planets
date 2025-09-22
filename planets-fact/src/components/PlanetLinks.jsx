@@ -31,31 +31,38 @@ export default function PlanetLinks() {
   const hoverText = HOVER_TEXT[planetName] ?? HOVER_TEXT.default;
 
   return (
-    <div className="planet-links flex justify-center gap-16 border-b px-8  md:flex-col md:max-w-xs md:border-b-0 md:gap-4">
+    <div
+      className="planet-links flex justify-center gap-16 border-b px-8 
+                md:flex-col md:w-full md:items-stretch md:border-b-0 md:gap-4 
+                2xl:px-0 2xl:w-full 2xl:py-10 2xl:items-stretch 2xl:max-w-none"
+    >
       <NavLink
         to={basePath}
-        className={`${linkBase} ${hoverBg} ${hoverText} md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
+        className={`${linkBase} ${hoverBg} ${hoverText} 
+                block w-full md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
         end
       >
-        <p className="pl-6 text-sm hidden md:block">01</p>
+        <p className="pl-6  hidden md:block">01</p>
         <p>OVERVIEW</p>
         <span className="absolute h-1 w-full left-0 -bottom-5 hidden" />
       </NavLink>
 
       <NavLink
         to={`${basePath}/structure`}
-        className={`${linkBase} ${hoverBg} ${hoverText} md:hover:border-transparent md:px-0 md:pr-20`}
+        className={`${linkBase} ${hoverBg} ${hoverText} 
+                block w-full md:hover:border-transparent md:px-0 md:pr-20`}
       >
-        <p className="pl-6 text-sm hidden md:block">02</p>
+        <p className="pl-6  hidden md:block">02</p>
         <p>STRUCTURE</p>
         <span className="absolute h-1 w-full left-0 -bottom-5 hidden" />
       </NavLink>
 
       <NavLink
         to={`${basePath}/surface`}
-        className={`${linkBase} ${hoverBg} ${hoverText} md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
+        className={`${linkBase} ${hoverBg} ${hoverText} 
+                block w-full md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
       >
-        <p className="pl-6 text-sm hidden md:block">03</p>
+        <p className="pl-6  hidden md:block">03</p>
         <p>SURFACE</p>
         <span className="absolute h-1 w-full left-0 -bottom-5 hidden" />
       </NavLink>
