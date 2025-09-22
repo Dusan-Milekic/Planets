@@ -20,6 +20,7 @@ body {
 
   font-family: "Antonio", sans-serif;
   font-optical-sizing: auto;
+  background-color: #070724;
   background-image: url("./assets/background-stars.svg");
   background-position: center;
   background-size: contain;

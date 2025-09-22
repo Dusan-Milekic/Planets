@@ -7,7 +7,6 @@ export default class Header extends React.Component {
     super(props);
     this.state = {
       navbar: false,
-      header: false,
     };
     this.navbarRef = createRef();
     this.headerRef = createRef();
@@ -18,10 +17,8 @@ export default class Header extends React.Component {
       this.setState({ navbar: !this.state.navbar }, () => {
         if (this.state.navbar) {
           this.navbarRef.current.classList.remove("hidden");
-          this.headerRef.current.style.backgroundColor = "#070724";
         } else {
           this.navbarRef.current.classList.add("hidden");
-          this.headerRef.current.style.backgroundColor = "transparent";
         }
       });
     }
@@ -30,10 +27,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <>
-        <div
-          className="header flex justify-between items-center border-b-1 border-gray-500 px-8 py-5 transition-colors"
-          ref={this.headerRef}
-        >
+        <div className="header flex justify-between items-center border-b-1 border-gray-500 px-8 py-5 ">
           <div className="heading">
             <h1 className="text-3xl">THE PLANETS</h1>
           </div>
