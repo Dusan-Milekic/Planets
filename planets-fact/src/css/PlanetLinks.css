@@ -1,11 +1,16 @@
 @import "tailwindcss";
 @import "tailwindcss-animated";
 
+.link:hover > span {
+  display: block;
+}
 @layer components {
   span {
     @apply animate-fade;
   }
 }
-.link:hover > span {
-  display: block;
+@media only screen and (min-width: 48rem) {
+  .link:hover > span {
+    display: none;
+  }
 }

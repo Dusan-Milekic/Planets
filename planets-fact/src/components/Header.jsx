@@ -27,11 +27,55 @@ export default class Header extends React.Component {
   render() {
     return (
       <>
-        <div className="header flex justify-between items-center border-b-1 border-gray-500 px-8 py-5 ">
-          <div className="heading">
-            <h1 className="text-3xl">THE PLANETS</h1>
-          </div>
-          <div className="hamburger">
+        <div className="header flex justify-between items-center border-b px-8 py-5 md:flex-col">
+          <h1 className="text-3xl">THE PLANETS</h1>
+
+          <nav className="hidden md:block pt-5">
+            <ul className="flex gap-10">
+              <li className="py-4 cursor-pointer">
+                <a href="/mercury" className="text-lg">
+                  MERCURY
+                </a>
+              </li>
+              <li className=" py-4 cursor-pointer">
+                <a href="/venus" className="text-lg">
+                  VENUS
+                </a>
+              </li>
+              <li className=" py-4 cursor-pointer">
+                <a href="/earth" className="text-lg">
+                  EARTH
+                </a>
+              </li>
+              <li className=" py-4 cursor-pointer">
+                <a href="/mars" className="text-lg">
+                  MARS
+                </a>
+              </li>
+              <li className=" py-4 cursor-pointer">
+                <a href="/jupiter" className="text-lg">
+                  JUPITER
+                </a>
+              </li>
+              <li className=" py-4 cursor-pointer">
+                <a href="/saturn" className="text-lg">
+                  SATURN
+                </a>
+              </li>
+              <li className="py-4 cursor-pointer">
+                <a href="/uranus" className="text-lg">
+                  URANUS
+                </a>
+              </li>
+              <li className=" py-4 cursor-pointer">
+                <a href="/neptune" className="text-lg">
+                  NEPTUNE
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div className="hamburger md:hidden">
             <img
               src={icon_hamburger}
               alt="hamburger"

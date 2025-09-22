@@ -51,7 +51,7 @@ function App() {
         <Header />
       </header>
       <main>
-        <nav>
+        <nav className="md:hidden">
           <PlanetLinks />
         </nav>
 
