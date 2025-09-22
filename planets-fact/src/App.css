@@ -3,7 +3,6 @@
 @import "tailwindcss";
 @import "tailwindcss-animated";
 #root {
-  margin: 0 30px;
   padding: 0;
   text-align: center;
 }
