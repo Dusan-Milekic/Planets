@@ -4,16 +4,27 @@ import Header from "./components/Header";
 import PlanetLinks from "./components/PlanetLinks";
 import PlanetImage from "./components/PlanetImage";
 import PlanetInfo from "./components/PlanetInfo";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import PlanetStructure from "./components/PlanetStructure";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 
-// Komponenta koja koristi useLocation
+// Komponenta koja koristi useParams umesto useLocation
 function PlanetPage() {
-  const location = useLocation();
-  const planetName = location.pathname.slice(1); // Uklanja "/" sa početka
-  console.log(planetName, "ASD");
+  const { planetName } = useParams();
+
   return (
     <>
       <PlanetImage planet={planetName} />
+      <PlanetInfo planet={planetName} />
+    </>
+  );
+}
+
+function PlanetStructurePage() {
+  const { planetName } = useParams();
+
+  return (
+    <>
+      <PlanetStructure planet={planetName} />
       <PlanetInfo planet={planetName} />
     </>
   );
@@ -31,7 +42,12 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/*" element={<PlanetPage />} />
+          <Route path="/:planetName" element={<PlanetPage />} />
+          <Route
+            path="/:planetName/structure"
+            element={<PlanetStructurePage />}
+          />
+
           <Route
             path="/"
             element={
