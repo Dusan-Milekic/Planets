@@ -25,7 +25,7 @@ export default function PlanetLinks() {
   const basePath = `/${planetName}`;
 
   const linkBase =
-    "tracking-[1.93px] text-xl relative md:border md:py-2 flex gap-5 items-center px-5 py-4 cursor-pointer";
+    "tracking-[1.93px] text-xl relative md:border md:py-2 flex gap-5 items-center px-3 py-4 cursor-pointer";
 
   const hoverBg = HOVER_BG[planetName] ?? "md:hover:bg-[#2986F0]";
   const hoverText = HOVER_TEXT[planetName] ?? HOVER_TEXT.default;
@@ -39,7 +39,7 @@ export default function PlanetLinks() {
       <NavLink
         to={basePath}
         className={`${linkBase} ${hoverBg} ${hoverText} 
-                block  md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
+                block   md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
         end
       >
         <p className="pl-6  hidden md:block">01</p>
@@ -50,7 +50,7 @@ export default function PlanetLinks() {
       <NavLink
         to={`${basePath}/structure`}
         className={`${linkBase} ${hoverBg} ${hoverText} 
-                block  md:hover:border-transparent md:px-0 md:pr-20`}
+                block md:hover:border-transparent md:px-0 md:pr-20`}
       >
         <p className="pl-6  hidden md:block">02</p>
         <p>STRUCTURE</p>
@@ -60,7 +60,7 @@ export default function PlanetLinks() {
       <NavLink
         to={`${basePath}/surface`}
         className={`${linkBase} ${hoverBg} ${hoverText} 
-                block  md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
+                block md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
       >
         <p className="pl-6  hidden md:block">03</p>
         <p>SURFACE</p>
