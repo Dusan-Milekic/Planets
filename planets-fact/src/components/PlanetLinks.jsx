@@ -32,14 +32,14 @@ export default function PlanetLinks() {
 
   return (
     <div
-      className="planet-links flex justify-center gap-16 border-b px-8 
+      className="planet-links flex  border-b justify-center 
                 md:flex-col md:w-full md:items-stretch md:border-b-0 md:gap-4 
                 2xl:px-0 2xl:w-full 2xl:py-10 2xl:items-stretch 2xl:max-w-none"
     >
       <NavLink
         to={basePath}
         className={`${linkBase} ${hoverBg} ${hoverText} 
-                block w-full md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
+                block  md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
         end
       >
         <p className="pl-6  hidden md:block">01</p>
@@ -50,7 +50,7 @@ export default function PlanetLinks() {
       <NavLink
         to={`${basePath}/structure`}
         className={`${linkBase} ${hoverBg} ${hoverText} 
-                block w-full md:hover:border-transparent md:px-0 md:pr-20`}
+                block  md:hover:border-transparent md:px-0 md:pr-20`}
       >
         <p className="pl-6  hidden md:block">02</p>
         <p>STRUCTURE</p>
@@ -60,7 +60,7 @@ export default function PlanetLinks() {
       <NavLink
         to={`${basePath}/surface`}
         className={`${linkBase} ${hoverBg} ${hoverText} 
-                block w-full md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
+                block  md:hover:border-transparent md:py-3 md:px-0 md:pr-20`}
       >
         <p className="pl-6  hidden md:block">03</p>
         <p>SURFACE</p>
